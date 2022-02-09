@@ -36,7 +36,7 @@ class Hotel(Etablissement):
 class Tagger(models.Model):
     user = models.ForeignKey(User,null=False,on_delete=models.CASCADE)
     etablissement = models.ForeignKey(Etablissement,null=False,on_delete=models.CASCADE)
-    Tag = models.ForeignKey(User,null=False,on_delete=models.CASCADE)
+    tag = models.ForeignKey(User,null=False,on_delete=models.CASCADE)
 
 class Commentaire(models.Model):
     score = models.IntegerField(null=True)

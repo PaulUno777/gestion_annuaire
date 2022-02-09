@@ -6,13 +6,12 @@ from django.forms import TextInput,EmailInput,DateInput,PasswordInput,Form,CharF
 class SignupForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
-        fields = ('username', 'email', 'first_name', 'last_name','birthday')
+        fields = ('username', 'email', 'first_name', 'last_name')
         widgets = {
             'username': TextInput(attrs={'class':'input','minlength':'5'}),
             'email': EmailInput(attrs={'class':'input'}),
             'first_name': TextInput(attrs={'class':'input'}),
             'last_name': TextInput(attrs={'class':'input'}),
-            'birthday': DateInput(attrs={'class':'input','type':'date'}),
         }
 
 class LoginForm(Form):
